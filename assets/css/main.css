@@ -8630,3 +8630,47 @@ input, select, textarea {
 		height: auto;
 	}
 }
+/* Grouped photo section */
+
+.grouped-photo-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1.25rem;
+	margin: 2rem auto;
+	max-width: 1000px;
+}
+
+.grouped-photo-grid img {
+	display: block;
+	width: 100%;
+	height: 350px;
+	object-fit: cover;
+	border-radius: 6px;
+}
+
+.grouped-photo-grid img:last-child:nth-child(odd) {
+	grid-column: 1 / -1;
+	width: calc(50% - 0.625rem);
+	justify-self: center;
+}
+
+.grouped-photo-comments {
+	max-width: 850px;
+	margin: 2.5rem auto 0;
+	text-align: left;
+}
+
+@media screen and (max-width: 736px) {
+	.grouped-photo-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.grouped-photo-grid img {
+		height: auto;
+	}
+
+	.grouped-photo-grid img:last-child:nth-child(odd) {
+		grid-column: auto;
+		width: 100%;
+	}
+}
