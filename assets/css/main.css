@@ -8797,3 +8797,38 @@ input, select, textarea {
 	}
 
 }
+/* Module description and APA reference styling */
+
+.reference-block {
+	margin-top: 2rem;
+	text-align: left;
+}
+
+.reference-block h4 {
+	margin-bottom: 0.75rem;
+}
+
+.apa-reference {
+	margin: 0;
+	padding-left: 2rem;
+	text-indent: -2rem;
+	overflow-wrap: anywhere;
+}
+
+.bundle-image img {
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+
+.bundle-text {
+	margin-top: 1.5rem;
+}
+
+@media screen and (max-width: 736px) {
+	.apa-reference {
+		padding-left: 1.25rem;
+		text-indent: -1.25rem;
+	}
+}
